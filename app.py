@@ -1,5 +1,6 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, send_from_directory
 from googletrans import Translator
+import os
 
 app = Flask(__name__)
 translator = Translator()
@@ -7,6 +8,11 @@ translator = Translator()
 @app.route('/')
 def home():
     return render_template('index.html')
+
+# Manually serve static files if necessary
+@app.route('/static/<path:filename>')
+def static_files(filename):
+    return send_from_directory(os.path.join(app.root_path, 'static'), filename)
 
 @app.route('/translate', methods=['POST'])
 def translate():

@@ -1,25 +1,37 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f0f0f0;
-    overflow-y: auto; /* Allow scrolling */
+    padding: 0;
+    text-align: center;
+    color: white;
+    overflow-y: auto;
+    background: url('/static/purple-ambient-background-1920x1200.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 .container {
     text-align: center;
-    background-color: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0);
     width: 90%;
-    max-width: 500px;
-    margin: 20px auto; /* Add margin for scrolling */
+    max-width: 600px;
+    margin: 20px auto; /* Use 'auto' instead of 'center' */
 }
 
+
 textarea {
+    color: white; /* Set text color to white */
     width: 100%;
     height: 150px;
-    margin-bottom: 10px;
+    margin-bottom: 20px auto;
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 24px;
+    text-align: center;
+    background: transparent;
+    outline-style:p.double {outline-style: double;};
+    box-shadow: 0 0 10px rgb(255, 255, 255);
 }
 
 select, button {
@@ -30,23 +42,25 @@ select, button {
 
 button {
     background-color: #4CAF50;
-    color: white;
+    color: rgb(199, 5, 5);
     border: none;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #20cb28;
 }
 
 /* About Us Section */
 .about {
     text-align: center;
-    background: white;
+    background: transparent;
     padding: 20px;
     margin: 20px auto;
+    outline-style:p.double {outline-style: double;};
     max-width: 600px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
 }
+
