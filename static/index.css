@@ -5,7 +5,7 @@ body {
     text-align: center;
     color: white;
     overflow-y: auto;
-    background: url('/static/purple-ambient-background-1920x1200.jpg') no-repeat center center fixed;
+    background: url('/static/purple-ambient-background-1920x1200.jpg') no-repeat center center scroll;
     background-size: cover;
 }
 
@@ -64,3 +64,13 @@ button:hover {
     box-shadow: 0 0 10px rgb(255, 255, 255);
 }
 
+.upload-image {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.upload-image:hover {
+    transform: scale(1.1);
+}

@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Translation App</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Translation App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
 </head>
-
 <body>
+  <div class="container">
+    <h1>Document Translator</h1>
+    <form id="translateForm">
+      <textarea id="text" placeholder="Enter text to translate"></textarea>
+      <select id="sourceLang">
+        <option value="auto">Auto Detect</option>
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+      </select>
+      <select id="targetLang">
+        <option value="es">Spanish</option>
+        <option value="en">English</option>
+        <option value="fr">French</option>
+      </select>
+      <button type="submit">Translate</button>
+    </form>
+    <h2>Translated Text:</h2>
+    <p id="translatedText"></p>
+  </div>
 
-    <div class="container">
-        <h1>Document Translator</h1>
-        <form id="translateForm">
-            <textarea id="text" placeholder="Enter text to translate"></textarea>
-            <select id="sourceLang">
-                <option value="auto">Auto Detect</option>
-                <option value="en">English</option>
-                <option value="es">Spanish</option>
-                <option value="fr">French</option>
-                <!-- Add more languages as needed -->
-            </select>
-            <select id="targetLang">
-                <option value="es">Spanish</option>
-                <option value="en">English</option>
-                <option value="fr">French</option>
-                <!-- Add more languages as needed -->
-            </select>
-            <button type="submit">Translate</button>
-        </form>
+  <div class="file-upload">
+    <label for="fileInput">
+      <img src="{{ url_for('static', filename='button1.png') }}"
+           alt="Upload" class="upload-image">
+    </label>
+    <input type="file" id="fileInput" accept=".txt,.docx,.pdf" style="display:none">
+  </div>
 
-        <h2>Translated Text:</h2>
-        <p id="translatedText"></p>
-    </div>
+  <section class="about">
+    <h2>About Us</h2>
+    <p>Quick, accurate translations in multiple languages.</p>
+  </section>
 
-    <section class="about">
-        <h2>About Us</h2>
-        <p>Welcome to our translation app! Our goal is to make communication easier by providing quick and accurate translations in multiple languages.</p>
-    </section>
-
-    <script src="{{ url_for('static', filename='index.js') }}"></script>
+  <script src="{{ url_for('static', filename='index.js') }}"></script>
 </body>
 </html>
 
